@@ -27,7 +27,7 @@ export const Projects = () => {
 
   const handleLike = async (projectId: string) => {
     if (likedProjects.has(projectId)) {
-      toast.info("Already liked this project");
+      toast.info("لقد أعجبت بهذا المشروع مسبقاً");
       return;
     }
 
@@ -41,7 +41,7 @@ export const Projects = () => {
     if (!error) {
       await supabase.rpc("increment_like_count", { project_id: projectId });
       setLikedProjects(new Set([...likedProjects, projectId]));
-      toast.success("Project liked!");
+      toast.success("تم الإعجاب بالمشروع!");
       fetchProjects();
     }
   };
@@ -51,10 +51,10 @@ export const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="bg-gradient-primary bg-clip-text text-transparent">
-            Featured Projects
+            مشاريع مميزة
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my best work, combining innovative design with cutting-edge technology
+            عرض لأفضل أعمالي التي تجمع بين التصميم المبتكر والتقنيات الحديثة
           </p>
         </div>
 
@@ -77,8 +77,8 @@ export const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
                 
                 {project.is_featured && (
-                  <Badge className="absolute top-4 right-4 bg-gradient-primary text-primary-foreground border-0">
-                    Featured
+                  <Badge className="absolute top-4 left-4 bg-gradient-primary text-primary-foreground border-0">
+                    مميز
                   </Badge>
                 )}
               </div>
@@ -134,8 +134,8 @@ export const Projects = () => {
                     variant="ghost"
                     className="hover:bg-primary/10 hover:text-primary"
                   >
-                    View
-                    <ExternalLink className="ml-1 h-4 w-4" />
+                    عرض
+                    <ExternalLink className="mr-1 h-4 w-4" />
                   </Button>
                 </div>
               </div>

@@ -8,20 +8,20 @@ export const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground flex items-center gap-2">
-            © {currentYear} Elite Developer. Built with
+            © {currentYear} موسى. تم البناء بـ
             <Heart className="h-4 w-4 text-primary animate-pulse" />
-            and cutting-edge technology
+            وأحدث التقنيات
           </p>
           
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">
-              Privacy Policy
+              سياسة الخصوصية
             </a>
             <a href="#" className="hover:text-primary transition-colors">
-              Terms of Service
+              شروط الخدمة
             </a>
             <a href="#" className="hover:text-primary transition-colors">
-              Contact
+              تواصل معي
             </a>
           </div>
         </div>

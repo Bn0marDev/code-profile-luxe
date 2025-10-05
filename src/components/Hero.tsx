@@ -24,8 +24,8 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-accent rounded-full blur-3xl opacity-30" />
       </div>
 
@@ -34,17 +34,23 @@ export const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground">Available for freelance projects</span>
+            <span className="text-sm text-muted-foreground">متاح للمشاريع الحرة</span>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="animate-fade-in">
-            {profile?.username || "Elite Developer"}
-          </h1>
+          {/* Main Heading with Highlighted Name */}
+          <div className="animate-fade-in">
+            <h1 className="inline-block">
+              مرحباً، أنا{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10 text-primary animate-glow">موسى</span>
+                <span className="absolute inset-0 bg-primary/20 blur-xl animate-pulse"></span>
+              </span>
+            </h1>
+          </div>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Full-Stack Engineer crafting exceptional digital experiences with cutting-edge technologies
+            مطور ويب محترف متخصص في بناء تجارب رقمية استثنائية بأحدث التقنيات
           </p>
 
           {/* CTA Buttons */}
@@ -53,16 +59,16 @@ export const Hero = () => {
               size="lg" 
               className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
-              View Projects
-              <ArrowDown className="ml-2 h-5 w-5" />
+              استعرض المشاريع
+              <ArrowDown className="mr-2 h-5 w-5" />
             </Button>
             <Button 
               size="lg" 
               variant="outline"
               className="border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
             >
-              Get in Touch
-              <Mail className="ml-2 h-5 w-5" />
+              تواصل معي
+              <Mail className="mr-2 h-5 w-5" />
             </Button>
           </div>
 
@@ -71,21 +77,21 @@ export const Hero = () => {
             <a 
               href="#" 
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
-              aria-label="GitHub Profile"
+              aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
             </a>
             <a 
               href="#" 
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
-              aria-label="LinkedIn Profile"
+              aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a 
               href="#" 
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
-              aria-label="Email Contact"
+              aria-label="البريد الإلكتروني"
             >
               <Mail className="h-5 w-5" />
             </a>
