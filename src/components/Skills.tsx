@@ -44,8 +44,8 @@ export const Skills = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="bg-gradient-primary bg-clip-text text-transparent">
-            المهارات والخبرات
+          <h2 className="text-foreground">
+            المهارات و<span className="name-highlight">الخبرات</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             إتقان أحدث التقنيات لتقديم نتائج استثنائية
@@ -58,7 +58,7 @@ export const Skills = () => {
             return (
               <Card
                 key={skill.id}
-                className="group relative bg-card/30 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 overflow-hidden hover:shadow-elevated animate-slide-up"
+                className="group relative bg-card backdrop-blur-sm border-2 border-border hover:border-primary transition-all duration-300 overflow-hidden hover:shadow-elevated animate-slide-up"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 {/* Gradient Overlay */}

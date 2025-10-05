@@ -32,19 +32,15 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-slide-up">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border-2 border-border backdrop-blur-sm">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm text-muted-foreground">متاح للمشاريع الحرة</span>
           </div>
 
           {/* Main Heading with Highlighted Name */}
           <div className="animate-fade-in">
-            <h1 className="inline-block">
-              مرحباً، أنا{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 text-primary animate-glow">موسى</span>
-                <span className="absolute inset-0 bg-primary/20 blur-xl animate-pulse"></span>
-              </span>
+            <h1 className="text-foreground">
+              مرحباً، أنا <span className="name-highlight">موسى</span>
             </h1>
           </div>
 
@@ -76,24 +72,24 @@ export const Hero = () => {
           <div className="flex items-center justify-center gap-4 pt-8">
             <a 
               href="#" 
-              className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-full bg-card border-2 border-border hover:border-primary hover:bg-card transition-all duration-300 hover:scale-110"
               aria-label="GitHub"
             >
-              <Github className="h-5 w-5" />
+              <Github className="h-5 w-5 text-foreground" />
             </a>
             <a 
               href="#" 
-              className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-full bg-card border-2 border-border hover:border-primary hover:bg-card transition-all duration-300 hover:scale-110"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-5 w-5 text-foreground" />
             </a>
             <a 
               href="#" 
-              className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-full bg-card border-2 border-border hover:border-primary hover:bg-card transition-all duration-300 hover:scale-110"
               aria-label="البريد الإلكتروني"
             >
-              <Mail className="h-5 w-5" />
+              <Mail className="h-5 w-5 text-foreground" />
             </a>
           </div>
         </div>

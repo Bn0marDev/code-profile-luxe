@@ -24,7 +24,7 @@ export const ThemeToggle = () => {
       variant="outline"
       size="icon"
       onClick={toggleTheme}
-      className="fixed top-6 left-6 z-50 rounded-full bg-card/80 backdrop-blur-sm border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:shadow-glow"
+      className="fixed top-6 left-6 z-50 rounded-full bg-card backdrop-blur-sm border-2 border-border hover:border-primary hover:bg-card transition-all duration-300 hover:shadow-glow"
       aria-label={theme === "dark" ? "تفعيل النمط النهاري" : "تفعيل النمط الليلي"}
     >
       {theme === "dark" ? (

@@ -50,8 +50,8 @@ export const Projects = () => {
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="bg-gradient-primary bg-clip-text text-transparent">
-            مشاريع مميزة
+          <h2 className="text-foreground">
+            مشاريع <span className="name-highlight">مميزة</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             عرض لأفضل أعمالي التي تجمع بين التصميم المبتكر والتقنيات الحديثة
@@ -62,7 +62,7 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={project.id}
-              className="group bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-500 overflow-hidden hover:shadow-card animate-slide-up"
+              className="group bg-card backdrop-blur-sm border-2 border-border hover:border-primary transition-all duration-500 overflow-hidden hover:shadow-card animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
